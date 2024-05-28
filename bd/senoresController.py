@@ -1,6 +1,3 @@
-#importamos librerías
-import pandas as pd
-
 #Realizamos conexión a base de datos
 from .conexion import crearConexion
 db = crearConexion()
