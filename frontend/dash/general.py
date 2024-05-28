@@ -8,8 +8,8 @@ from .sensor3 import sensor3
 from .sensor4x import sensor4x
 from .sensor4y import sensor4y
 from .sensor4z import sensor4z
-from .sensor5 import sensor5
-from .sensor6 import sensor6
+from .sensorDistancia1 import sensorDistancia1
+from .sensorDistancia2 import sensor6
 
 # Define estilos adicionales en CSS
 styles = {
@@ -32,7 +32,7 @@ general = dbc.Container([
         dbc.Col(sensor4x,md=4,style=styles['column-style']),
         dbc.Col(sensor4y,md=4,style=styles['column-style']),
         dbc.Col(sensor4z,md=4,style=styles['column-style']),
-        dbc.Col(sensor5,md=6,style=styles['column-style']),
+        dbc.Col(sensorDistancia1,md=6,style=styles['column-style']),
         dbc.Col(sensor6,md=6,style=styles['column-style']),
     ])
 ])

@@ -6,7 +6,7 @@ import plotly.graph_objs as go
 from .predict import predict
 
 #conexión base de datos
-from bd.conexion import readSensor
+from bd.ubicacionController import readSensor
 lectura = readSensor()
 
 # Extraer coordenadas
