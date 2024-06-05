@@ -2,6 +2,11 @@
 from .conexion import crearConexion
 db = crearConexion()
 
+#Read all - Sensores Acelerometro
+def readAcelerometroDB():
+    consulta = db.sensorAcelerometro.find_one(sort=[('tiempo', -1)])
+    return consulta
+
 #Read all - Sensores Distancia 1
 def readDistancia1DB():
     consulta = db.sensorDistancia1.find_one(sort=[('tiempo', -1)])
@@ -27,8 +32,3 @@ def readVibracion3DB():
     consulta = db.sensorVibracion3.find_one(sort=[('tiempo', -1)])
     return consulta
 
-#Read all - Sensores Acelerometro
-def readAcelerometroDB():
-    consulta = db.sensoraAcelerometro.find_one(sort=[('tiempo', -1)])
-    return consulta
-    

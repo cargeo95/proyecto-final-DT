@@ -6,11 +6,11 @@ import plotly.graph_objs as go
 data = [1, 2, 3, 4, 5]
 tiempo = [10, 15, 13, 17, 21]
 
-sensorDistancia2 = dbc.Container([
-    html.Label("Sensor - Distancia 2"),
-    dcc.Graph(id="sensorDistancia2"),
+sensorV2 = dbc.Container([
+    html.Label("Sensor 2 - Vibración"),
+    dcc.Graph(id="sensorVibracion2"),
     dcc.Interval(
-        id='interval-sensorDistancia2',
+        id='interval-sensorVibracion2',
         interval=2000,
         n_intervals=0
     ),

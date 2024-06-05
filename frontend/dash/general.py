@@ -2,14 +2,13 @@ from dash import html,dcc
 import dash_bootstrap_components as dbc
 
 #importamos sensores
-from .sensor1 import sensor1
-from .sensor2 import sensor2
-from .sensor3 import sensor3
+from .sensorV1 import sensorV1
+from .sensorV2 import sensorV2
+from .sensorV3 import sensorV3
 from .sensor4x import sensor4x
 from .sensor4y import sensor4y
-from .sensor4z import sensor4z
 from .sensorDistancia1 import sensorDistancia1
-from .sensorDistancia2 import sensor6
+from .sensorDistancia2 import sensorDistancia2
 
 # Define estilos adicionales en CSS
 styles = {
@@ -20,19 +19,16 @@ styles = {
     }
 }
 
-altura = {'height': '10%'}
-
 general = dbc.Container([
     html.H4("Visualización sensores"),
     html.Br(),
     dbc.Row([
-        dbc.Col(sensor1,md=4,style=styles['column-style']),
-        dbc.Col(sensor2,md=4,style=styles['column-style']),
-        dbc.Col(sensor3,md=4,style=styles['column-style']),
-        dbc.Col(sensor4x,md=4,style=styles['column-style']),
-        dbc.Col(sensor4y,md=4,style=styles['column-style']),
-        dbc.Col(sensor4z,md=4,style=styles['column-style']),
+        dbc.Col(sensorV1,md=4,style=styles['column-style']),
+        dbc.Col(sensorV2,md=4,style=styles['column-style']),
+        dbc.Col(sensorV3,md=4,style=styles['column-style']),
+        dbc.Col(sensor4x,md=6,style=styles['column-style']),
+        dbc.Col(sensor4y,md=6,style=styles['column-style']),
         dbc.Col(sensorDistancia1,md=6,style=styles['column-style']),
-        dbc.Col(sensor6,md=6,style=styles['column-style']),
+        dbc.Col(sensorDistancia2,md=6,style=styles['column-style']),
     ])
 ])

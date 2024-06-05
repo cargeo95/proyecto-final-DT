@@ -2,7 +2,7 @@ from dash import html, dcc
 import dash_bootstrap_components as dbc
 import plotly.graph_objs as go
 
-def create_figure(x_data, y_data):
+def create_figure_V2(x_data, y_data):
     return {
         'data': [
             go.Scatter(
@@ -24,7 +24,7 @@ def create_figure(x_data, y_data):
             },
             yaxis={
                 'title': {
-                    'text': 'Distancia [cm]',  # Título del eje Y
+                    'text': 'Estado',  # Título del eje Y
                     'font': {'size': 8}  # Ajusta el tamaño del texto del título del eje Y
                 },
                 'tickfont': {'size': 10},  # Ajusta el tamaño del texto de las etiquetas del eje Y
@@ -35,7 +35,7 @@ def create_figure(x_data, y_data):
     }
 
 sensorDistancia1 = dbc.Container([
-    html.Label("Sensor 5 - Distancia"),
-    dcc.Graph(id="sensorDistancia1", figure=create_figure([], [])),
-    dcc.Interval(id='interval-component', interval=2000, n_intervals=0),
+    html.Label("Sensor 2 - Vibración"),
+    dcc.Graph(id="sensorVibracion2", figure=create_figure_V2([], [])),
+    dcc.Interval(id='interval-sensorVibracion2', interval=2000, n_intervals=0),
 ])
